@@ -1,3 +1,10 @@
+/*
+Bismillahir Rahmanir Rahim
+
+Author	: Emdadul Islam
+
+Custome Sort.
+*/
 #include <iostream>
 #include <string>
 #include <algorithm>

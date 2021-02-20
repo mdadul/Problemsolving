@@ -1,3 +1,4 @@
+//Verdict 	: Accepted
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -17,24 +18,34 @@ int main(int argc, char const *argv[])
 	char d = arr[0][0];
 	char b = arr[0][1];
 	int p = n-1,flag=0;
-	for(int i=0;i<n;i++){
-		for(int j=0;j<n;j++){
-			if(i==j  || i==p){
-				if(arr[i][j]!=d){
-					flag=1;
-					//break;
-				}
-				cout<<"<--->"<<p;
-				p--;
+	if(d==b) cout<<"NO"<<"\n";
+	else{
 
+		for(int i=0;i<n;i++){
+			for(int j=0;j<n;j++){
+				if(i==j){
+					if(arr[i][j]!=d){
+						flag=1;
+						break;
+					}
+				}
+				else if(j==p){
+					if(arr[i][p]!=d){
+						flag=1;
+						break;
+					}
+				}
+				else{
+					if(arr[i][j]!=b){
+						flag=1;
+						break;
+					}
+				}
 			}
-			if(arr[i][j]!=b){
-				flag=1;
-				//break;
-			}
+			p--;
 		}
+		if(flag==0 ) cout<<"YES"<<"\n";
+		else cout<<"NO"<<"\n";
 	}
-	if(flag==0) cout<<"YES"<<"\n";
-	else cout<<"No"<<"\n";
 	return 0;
 }

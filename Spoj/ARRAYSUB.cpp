@@ -6,16 +6,16 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	long long int n;
+	int n,k;
 	cin>>n;
-	int sum=0,cnt=0;
-	for(int i=1;i<n;i++){
-		if(sum<n){
-			sum+=i;
-			if(sum<=n) cnt++;
-		}
-		else break;
+	int arr[n+10];
+	for(int i=0;i<n;i++){
+		cin>>arr[i];
 	}
-	cout<<cnt<<"\n";
+	cin>>k;
+
+	for(int i=0;i<n;i++){
+		
+	}
 	return 0;
 }

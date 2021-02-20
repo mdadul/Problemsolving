@@ -1,3 +1,4 @@
+//Accepted
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -6,16 +7,13 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	long long int n;
+	int n;
 	cin>>n;
-	int sum=0,cnt=0;
-	for(int i=1;i<n;i++){
-		if(sum<n){
-			sum+=i;
-			if(sum<=n) cnt++;
-		}
-		else break;
+	while(n--) {
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	    if(a+b>c) cout<<"OK"<<"\n";
+	    else cout<<"Wrong!!"<<"\n";
 	}
-	cout<<cnt<<"\n";
 	return 0;
 }

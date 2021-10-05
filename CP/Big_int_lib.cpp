@@ -32,6 +32,7 @@ int big_len(big num)
 	return j;
 }
 
+//
 void big_print(big num)
 {
 	int i;
